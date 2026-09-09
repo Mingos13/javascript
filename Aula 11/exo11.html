@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual e a sua nacionalidade:<input type="text" name="ptps" id="ptps">
+    <input type="button" value="verificar" onclick="pais()">
+    <div id="res">
+
+    </div>
+    <script>
+        function pais(){
+            let tn = window.document.getElementById('ptps')
+            let res = window.document.getElementById('res')
+            let vel = tn.value
+            res.innerHTML = ` O seu pais de origem e <strong> ${vel}</strong>`
+            if (vel != 'angola'){
+                res.innerHTML += '<p> Voce e estrangeiro'
+            }else{
+                res.innerHTML += '<p> Voce e <strong> Mocambicano </strong>'
+            }
+                res.innerHTML += 'Esse pais nao e seu'
+            
+        }
+    </script>
+</body>
+</html>

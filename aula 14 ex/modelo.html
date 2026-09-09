@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gerador de tabuada</title>
+</head>
+<body>
+    <p>Numero<input type="number" name="txt1" id="n1">
+
+    <input type="button" value="gerar tabuada" onclick="gerar()"> </p>
+
+    <select name="tabuada" id="seltab" size="20"> 
+    
+        <option> Digita um numero</option>
+    </select>
+
+
+   
+    
+    <script>
+         function gerar(){
+            let cond = document.getElementById('n1')
+            let tab = document.getElementById('seltab')
+
+            if (cond.value == 0 ){
+                window.alert('verifica os numeros preenchidos')
+            }else{
+                let n = Number(cond.value)
+                let c = 1
+                tab.innerHTML = ''
+                while ( c <= 10){
+                    let item = document.createElement('option')
+                    item.text = `${n} x ${c} = ${n*c}`
+                    tab.appendChild(item)
+                    c++
+
+                }
+                
+            
+            }
+         }
+    </script>
+</body>
+</html>

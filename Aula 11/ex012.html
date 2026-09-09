@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Velocidade:<input type="number" name="phps" id="phps">
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="res">
+        Resultado
+    </div>
+    <script>
+        function calcular(){
+            let tn = window.document.getElementById('phps')
+            let res = window.document.getElementById('res')
+            let vel = Number(tn.value)
+            res.innerHTML = ` A sua velocidade actual e <strong> ${vel} km/h </strong> <br>`
+            if ( vel > 40){
+                res.innerHTML += '<p> Ultrapassou a velocidade permitida: <strong> multado </strong> <br>'      
+            } 
+                res.innerHTML += 'Dirija sempre com cuidado'       
+        }
+    </script>
+</body>
+</html>
